@@ -146,6 +146,10 @@ export const RUBRIC_MAX_TOTAL = RUBRIC_GROUPS.reduce(
   0,
 );
 
+export const CRITERION_LABELS: Record<string, string> = Object.fromEntries(
+  RUBRIC_GROUPS.flatMap((group) => group.criteria.map((c) => [c.key, c.label])),
+);
+
 export interface UnlockRules {
   minVideoWatchPercent: number;
   requireQuizPass: boolean;
