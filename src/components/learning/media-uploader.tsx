@@ -68,8 +68,8 @@ export function MediaUploader({ submissionId, studentProfileId, kind, maxMb, fil
 
   return (
     <div className="flex flex-col gap-3">
-      <p className="text-sm font-medium">
-        Tải lên {label} <span className="text-muted-foreground">(tối đa {maxMb}MB)</span>
+      <p className="font-label-md text-label-md text-on-surface">
+        Tải lên {label} <span className="text-on-surface-variant">(tối đa {maxMb}MB)</span>
       </p>
 
       {files.length > 0 && (
@@ -77,13 +77,13 @@ export function MediaUploader({ submissionId, studentProfileId, kind, maxMb, fil
           {files.map((file) => (
             <li
               key={file.id}
-              className="flex items-center justify-between gap-2 rounded-[var(--radius-control)] border border-border p-2 text-sm"
+              className="flex items-center justify-between gap-2 rounded-[var(--radius-control)] border border-outline-variant bg-surface-container-lowest p-2 text-sm"
             >
               <span className="flex items-center gap-2 truncate">
-                <Icon className="h-4 w-4 shrink-0 text-brand-royal" />
-                <span className="truncate">{file.original_filename}</span>
+                <Icon className="h-4 w-4 shrink-0 text-primary" />
+                <span className="truncate text-on-surface">{file.original_filename}</span>
                 {file.size_bytes != null && (
-                  <span className="text-xs text-muted-foreground">{formatFileSize(file.size_bytes)}</span>
+                  <span className="text-xs text-on-surface-variant">{formatFileSize(file.size_bytes)}</span>
                 )}
               </span>
               {!disabled && (
@@ -103,7 +103,10 @@ export function MediaUploader({ submissionId, studentProfileId, kind, maxMb, fil
       )}
 
       {!disabled && (
-        <div>
+        <label
+          htmlFor={`upload-${kind}-${submissionId}`}
+          className="flex cursor-pointer flex-col items-center gap-3 rounded-[var(--radius-card)] border-2 border-dashed border-outline-variant bg-surface-container-low px-6 py-10 text-center transition-colors hover:border-primary hover:bg-surface-container-lowest"
+        >
           <input
             ref={inputRef}
             type="file"
@@ -112,14 +115,19 @@ export function MediaUploader({ submissionId, studentProfileId, kind, maxMb, fil
             className="hidden"
             id={`upload-${kind}-${submissionId}`}
           />
-          <label htmlFor={`upload-${kind}-${submissionId}`}>
-            <Button type="button" variant="outline" asChild>
-              <span>
-                <Upload className="h-4 w-4" /> Chọn file {label}
-              </span>
-            </Button>
-          </label>
-        </div>
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-surface-container-highest text-primary">
+            <Upload className="h-6 w-6" aria-hidden="true" />
+          </div>
+          <div>
+            <p className="font-headline-md text-headline-md text-on-surface">Kéo và thả {label} vào đây</p>
+            <p className="mt-1 text-sm text-on-surface-variant">hoặc bấm để chọn file từ máy của bạn</p>
+          </div>
+          <Button type="button" variant="primary" asChild>
+            <span>
+              <Upload className="h-4 w-4" /> Chọn file {label}
+            </span>
+          </Button>
+        </label>
       )}
 
       {progress != null && <Progress value={progress} label="Tiến trình tải lên" />}

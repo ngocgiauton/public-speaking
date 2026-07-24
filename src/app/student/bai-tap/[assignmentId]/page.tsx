@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { SubmissionStatusBadge } from "@/components/gamification/submission-status-badge";
 import { FeedbackPanel } from "@/components/learning/feedback-panel";
 import { AssignmentWorkspaceForm } from "@/components/learning/assignment-workspace-form";
@@ -45,18 +46,23 @@ export default async function AssignmentWorkspacePage({
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
-      <PageHeader
-        title={assignment.title}
-        description={`Buổi ${lesson.session_number}: ${lesson.title}`}
-        breadcrumbs={[{ label: "Bài tập", href: "/student/bai-tap" }, { label: assignment.title }]}
-        actions={<SubmissionStatusBadge status={submission.status} />}
-      />
+      <div>
+        <Badge variant="error" className="mb-2">
+          Assignment / Bài tập
+        </Badge>
+        <PageHeader
+          title={assignment.title}
+          description={`Buổi ${lesson.session_number}: ${lesson.title}`}
+          breadcrumbs={[{ label: "Bài tập", href: "/student/bai-tap" }, { label: assignment.title }]}
+          actions={<SubmissionStatusBadge status={submission.status} />}
+        />
+      </div>
 
       <Card>
         <CardHeader>
           <CardTitle>Yêu cầu bài tập</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-2 text-sm text-muted-foreground">
+        <CardContent className="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
           <p>{assignment.description}</p>
           {assignment.instructions && <p>{assignment.instructions}</p>}
         </CardContent>
