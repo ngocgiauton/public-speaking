@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Achievements - SpeakUp Kids</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#410001",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#785900",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#ffdad5",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "surface": "#fcf9f8",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-fixed": "#2c1600",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "outline-variant": "#d4c5ab",
+                        "inverse-surface": "#303030",
+                        "primary-fixed-dim": "#fabd00",
+                        "primary-fixed": "#ffdf9e",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-container": "#dc3128",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-background": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#6d5100",
+                        "surface-tint": "#785900",
+                        "tertiary": "#8b5000",
+                        "tertiary-container": "#ffbe7e",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed": "#261a00",
+                        "outline": "#827660",
+                        "on-primary-fixed-variant": "#5b4300",
+                        "secondary": "#b81311",
+                        "on-secondary-fixed-variant": "#930005",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "background": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#4f4632",
+                        "surface-variant": "#e5e2e1",
+                        "primary-container": "#ffc107",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-container": "#7e4900",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#fabd00",
+                        "tertiary-fixed": "#ffdcbe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .golden-shadow { box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15); }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.5); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-sans min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full w-64 flex-col p-md border-r border-outline-variant bg-surface-container-low dark:bg-surface-container-lowest z-40">
+<div class="mb-xl">
+<h1 class="font-headline-md text-headline-md text-primary">SpeakUp Kids</h1>
+</div>
+<div class="flex items-center gap-sm mb-lg">
+<img class="w-[48px] h-[48px] rounded-full object-cover" data-alt="A cheerful profile picture of a confident young student with short dark hair, smiling warmly. The lighting is bright and sunny, highlighting a bright yellow shirt against a soft white background, evoking optimism and youth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8xeSjdenAbw5vR4nluBwOw0_3xMHrvigZZPfvvU8dHoR6l-C9W1IKdf7pfbJ_7iuHreBLxN_wu7tng7dhxPFoGk2eQtugN1qCMHw0HMT19s49EM51J13rxpGopeRnXTDtduh1AHNGrpZO4ACmQnMZw-XH87TgDto2A05_sfs64RP3qYUCSTy1ZioO97bKe_E09vaS50jvQVwUZ0pG8fR_jddcWl6Zvt-l6bDPCCKqME2OSb0AqWTt"/>
+<div>
+<h2 class="font-label-md text-label-md text-on-surface">Chào, Minh!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Future Orator</p>
+</div>
+</div>
+<button class="w-full h-[48px] bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full mb-lg golden-shadow hover:scale-105 transition-transform">
+            Start Practice
+        </button>
+<ul class="flex-1 space-y-sm">
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">map</span>
+                    Learning Journey
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mic_external_on</span>
+                    Practice Room
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+                    My Lessons
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">upload_file</span>
+                    Assignments
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-sm p-sm bg-primary-container text-on-primary-container rounded-lg font-bold translate-x-1 transition-transform font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+                    Achievements
+                </a>
+</li>
+</ul>
+<div class="mt-auto border-t border-outline-variant pt-md">
+<ul class="space-y-sm">
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">help</span>
+                        Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop bg-surface-bright min-h-screen">
+<header class="mb-xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-sm">Thành Tích Của Bạn <br/><span class="text-primary-fixed-dim text-headline-lg font-headline-lg block mt-2">Your Achievements</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Celebrate your progress and earned certificates on your journey to becoming a confident speaker.</p>
+</header>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xl">
+<div class="bg-surface-container-lowest p-gutter rounded-xl golden-shadow flex flex-col justify-between relative overflow-hidden border border-outline-variant">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary-fixed-dim rounded-full opacity-20 blur-xl"></div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Kinh Nghiệm / XP</h3>
+<div class="flex items-end gap-sm">
+<span class="font-display-lg text-display-lg text-primary">2,450</span>
+<span class="font-label-md text-label-md text-on-surface-variant mb-2">XP</span>
+</div>
+</div>
+<div class="mt-md">
+<div class="flex justify-between font-label-sm text-label-sm mb-2 text-on-surface-variant">
+<span>Level 4</span>
+<span>Level 5</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-3">
+<div class="bg-gradient-to-r from-[#FF9800] to-[#FFC107] h-3 rounded-full" style="width: 75%"></div>
+</div>
+<p class="font-label-sm text-label-sm mt-2 text-on-surface-variant">550 XP to next level</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-gutter rounded-xl golden-shadow flex flex-col justify-between relative overflow-hidden border border-outline-variant">
+<div class="absolute -right-4 -top-4 text-primary-fixed-dim opacity-10">
+<span class="material-symbols-outlined !text-[120px]">local_fire_department</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Chuỗi Học / Streak</h3>
+<div class="flex items-end gap-sm">
+<span class="font-display-lg text-display-lg text-secondary">14</span>
+<span class="font-label-md text-label-md text-on-surface-variant mb-2">Days</span>
+</div>
+</div>
+<div class="mt-md flex gap-2">
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold font-label-sm">M</div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold font-label-sm">T</div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold font-label-sm">W</div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold font-label-sm">T</div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold font-label-sm">F</div>
+<div class="w-2 h-2 rounded-full bg-surface-container-high"></div>
+</div>
+</div>
+</div>
+<div class="bg-primary p-gutter rounded-xl golden-shadow flex flex-col justify-center items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
+<span class="material-symbols-outlined !text-[64px] text-primary-fixed mb-sm" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<h3 class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider mb-xs">Hạng Hiện Tại / Rank</h3>
+<span class="font-headline-lg text-headline-lg text-on-primary">Nhà Hùng Biện</span>
+<p class="font-body-md text-body-md text-primary-fixed-dim mt-2">Master Orator</p>
+</div>
+</section>
+<!-- Badges Gallery -->
+<section class="mb-xl">
+<div class="flex justify-between items-end mb-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Huy Hiệu / Badges</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Milestones you've unlocked.</p>
+</div>
+<button class="font-label-md text-label-md text-primary hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-gutter">
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant flex flex-col items-center text-center hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center mb-sm shadow-sm">
+<span class="material-symbols-outlined !text-[32px] text-tertiary" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">First Speech</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Earned 2 wks ago</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant flex flex-col items-center text-center hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-sm shadow-sm">
+<span class="material-symbols-outlined !text-[32px] text-secondary" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Brave Heart</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Conquered fear</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant flex flex-col items-center text-center hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-sm shadow-sm">
+<span class="material-symbols-outlined !text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Quick Thinker</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Impromptu Ace</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant flex flex-col items-center text-center hover:-translate-y-1 transition-transform cursor-pointer opacity-60 grayscale">
+<div class="w-16 h-16 rounded-full bg-surface-variant flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined !text-[32px] text-on-surface-variant">forum</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Debate Pro</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Locked</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant flex flex-col items-center text-center hover:-translate-y-1 transition-transform cursor-pointer opacity-60 grayscale hidden lg:flex">
+<div class="w-16 h-16 rounded-full bg-surface-variant flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined !text-[32px] text-on-surface-variant">groups</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Team Leader</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Locked</p>
+</div>
+</div>
+</section>
+<!-- Certificates -->
+<section>
+<div class="mb-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Chứng Chỉ / Certificates</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Official recognition of your course completions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Certificate Card -->
+<div class="glass-card rounded-xl p-gutter relative overflow-hidden flex flex-col sm:flex-row gap-md items-center">
+<div class="w-full sm:w-1/3 aspect-[4/3] rounded-lg bg-surface-container-highest relative overflow-hidden border-2 border-primary-fixed">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A beautifully designed, ornate certificate of completion featuring warm golden borders and elegant typography, presented in a high-key, modern bright light aesthetic. The paper texture is smooth and premium, conveying a sense of academic achievement and official recognition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4QM_TxwY-0sRR1liYNn-pKEJxCsnP-kwd5Ao8NnBogAFKOIlolkw4bXaFqGL2wmvgm86zDebKgXqfnc4KjgHjiVg36pkULO6-r2-NU7e6MTXBKCY1kbOAJGGy531LmGZBK8w7-uQDEGxuVFPbZFQewi3kA8TQ_TbLqqKd-qdm0MWC1-3nOpDija3XfKe9QUbyS7JmtB5B2-VlhUWb2y1dgznD0MrfhX3z15g_KbvVhmYBZIXXhMV1"/>
+</div>
+<div class="flex-1 flex flex-col items-start w-full">
+<div class="bg-primary-fixed-dim text-on-primary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm mb-sm inline-block">Khóa Cơ Bản / Beginner</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Tự Tin Nói Trước Đám Đông</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Confident Public Speaking - Level 1</p>
+<div class="flex items-center gap-sm mt-auto w-full">
+<button class="flex-1 h-[48px] border-2 border-primary text-primary font-label-md text-label-md rounded-full hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">visibility</span> View
+                            </button>
+<button class="w-[48px] h-[48px] bg-primary text-on-primary rounded-full flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Certificate Card -->
+<div class="glass-card rounded-xl p-gutter relative overflow-hidden flex flex-col sm:flex-row gap-md items-center opacity-75">
+<div class="w-full sm:w-1/3 aspect-[4/3] rounded-lg bg-surface-variant relative overflow-hidden border-2 border-outline flex items-center justify-center">
+<span class="material-symbols-outlined !text-[48px] text-on-surface-variant">lock</span>
+</div>
+<div class="flex-1 flex flex-col items-start w-full">
+<div class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm mb-sm inline-block">Khóa Nâng Cao / Advanced</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs text-on-surface-variant">Nghệ Thuật Kể Chuyện</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">The Art of Storytelling - Level 2</p>
+<div class="mt-auto w-full">
+<div class="w-full bg-surface-variant rounded-full h-2 mb-2">
+<div class="bg-[#FF9800] h-2 rounded-full" style="width: 40%"></div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">40% Completed</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

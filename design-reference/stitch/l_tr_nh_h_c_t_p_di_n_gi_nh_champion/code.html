@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learning Journey - Diễn Giả Nhí</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary-container": "#fffbff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#785900",
+                      "surface-container": "#f0eded",
+                      "secondary-fixed": "#ffdad5",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "surface": "#fcf9f8",
+                      "on-surface": "#1b1c1c",
+                      "on-tertiary-fixed": "#2c1600",
+                      "tertiary-fixed-dim": "#ffb870",
+                      "outline-variant": "#d4c5ab",
+                      "inverse-surface": "#303030",
+                      "primary-fixed-dim": "#fabd00",
+                      "primary-fixed": "#ffdf9e",
+                      "secondary-fixed-dim": "#ffb4a9",
+                      "surface-bright": "#fcf9f8",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-container": "#dc3128",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-background": "#1b1c1c",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#6d5100",
+                      "surface-tint": "#785900",
+                      "tertiary": "#8b5000",
+                      "tertiary-container": "#ffbe7e",
+                      "surface-dim": "#dcd9d9",
+                      "on-primary-fixed": "#261a00",
+                      "outline": "#827660",
+                      "on-primary-fixed-variant": "#5b4300",
+                      "secondary": "#b81311",
+                      "on-secondary-fixed-variant": "#930005",
+                      "on-tertiary-fixed-variant": "#693c00",
+                      "background": "#fcf9f8",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#4f4632",
+                      "surface-variant": "#e5e2e1",
+                      "primary-container": "#ffc107",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#7e4900",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#fabd00",
+                      "tertiary-fixed": "#ffdcbe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "sm": "12px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-sm": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg-mobile": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "display-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-md": [
+                              "Be Vietnam Pro"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      }
+              }
+            },
+          }
+    </script>
+<style>
+        .roadmap-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 100%;
+            background: linear-gradient(to bottom, #FF9800, #FFC107);
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        .roadmap-node {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full w-64 flex-col p-md border-r border-outline-variant bg-surface-container-low z-40">
+<div class="mb-xl flex flex-col items-center text-center">
+<img alt="Student Profile Picture" class="w-24 h-24 rounded-full mb-sm object-cover shadow-[0_8px_24px_rgba(255,152,0,0.15)]" data-alt="A portrait of a happy, confident Vietnamese child, suitable for a student profile avatar. Warm lighting, bright smile, against a soft golden hour background. Modern, high-contrast, optimistic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Q7dAT5xG0XwD5mCigG106dm6F1lw3UOKtrJ8Q1lRQ4KzeOt1TbMGCPRD5YT03usILTB06zAk1AXZ9UTbw3XMzlJNLjSFLPtbvtqZc1dAelEMTfj1L2qAxb4SPxMJG3kZC_nj-90w89kB5pOTKfxmPL_pfU9m5DbAHtSy5GhtctrZIsqjUwRFPiZAa7LPRKBokOPB87VpEYahgC1n9gG_kPlVj_LqBaQz8hMd1i6uBNmlc7K2BS67"/>
+<h2 class="font-headline-md text-headline-md text-primary">Chào, Minh!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Future Orator</p>
+</div>
+<div class="flex-1 space-y-sm">
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-sm p-sm bg-primary-container text-on-primary-container rounded-lg font-bold font-label-md text-label-md translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+                Learning Journey
+            </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mic_external_on</span>
+                Practice Room
+            </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+                My Lessons
+            </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">upload_file</span>
+                Assignments
+            </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">emoji_events</span>
+                Achievements
+            </a>
+</div>
+<button class="w-full bg-[#FFC107] text-on-primary-container font-bold font-label-md text-label-md py-sm rounded-lg min-h-[48px] shadow-[0_8px_24px_rgba(255,152,0,0.15)] hover:scale-95 transition-transform mt-auto mb-md">
+            Start Practice
+        </button>
+<div class="mt-auto space-y-sm pt-md border-t border-outline-variant">
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">help</span>
+                Support
+            </a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop bg-surface">
+<!-- Header -->
+<header class="mb-xl text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-md">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary">Learning Journey</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Bản đồ học tập - Diễn Giả Nhí</p>
+</div>
+<div class="inline-flex items-center gap-xs bg-tertiary-container text-on-tertiary-container px-md py-sm rounded-full font-label-md text-label-md shadow-[0_8px_24px_rgba(255,152,0,0.15)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                Level 2: Ngôn ngữ cơ thể (Body Language)
+            </div>
+</header>
+<!-- Roadmap -->
+<div class="relative max-w-4xl mx-auto py-xl">
+<!-- The Continuous Path -->
+<div class="roadmap-line"></div>
+<!-- Node 1: Completed -->
+<div class="roadmap-node flex justify-between items-center w-full mb-xl opacity-70">
+<div class="w-5/12 text-right pr-md">
+<h3 class="font-headline-md text-headline-md text-primary">Voice Control</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Kiểm soát giọng nói</p>
+</div>
+<div class="w-16 h-16 bg-[#FFC107] rounded-full flex justify-center items-center shadow-[0_4px_12px_rgba(255,152,0,0.2)] border-4 border-surface">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1; font-size: 32px;">check_circle</span>
+</div>
+<div class="w-5/12 pl-md">
+<div class="bg-white p-md rounded-xl border border-surface-variant shadow-sm inline-block">
+<span class="inline-block bg-[#F44336] text-white font-label-sm text-label-sm px-sm py-xs rounded-full mb-xs">Hoàn thành / Completed</span>
+<p class="font-body-md text-body-md text-on-surface mt-xs">Mastered breathing and projection.</p>
+</div>
+</div>
+</div>
+<!-- Node 2: Current -->
+<div class="roadmap-node flex justify-between items-center w-full mb-xl scale-105">
+<div class="w-5/12 text-right pr-md">
+<div class="bg-white p-md rounded-xl border-2 border-[#FF9800] shadow-[0_8px_24px_rgba(255,152,0,0.15)] inline-block">
+<span class="inline-block bg-[#FF9800] text-white font-label-sm text-label-sm px-sm py-xs rounded-full mb-xs">Đang học / Current</span>
+<p class="font-body-md text-body-md text-on-surface mt-xs">Using hands and face to tell a story.</p>
+<button class="mt-sm bg-[#FFC107] text-on-primary-container font-bold font-label-sm text-label-sm px-md py-xs rounded-lg shadow-sm hover:scale-95 transition-transform min-h-[36px]">Tiếp tục học</button>
+</div>
+</div>
+<div class="w-20 h-20 bg-[#FF9800] rounded-full flex justify-center items-center shadow-[0_8px_24px_rgba(255,152,0,0.3)] border-4 border-surface animate-pulse">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1; font-size: 40px;">play_arrow</span>
+</div>
+<div class="w-5/12 pl-md">
+<h3 class="font-headline-md text-headline-md text-secondary">Ngôn ngữ cơ thể</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Body Language</p>
+</div>
+</div>
+<!-- Node 3: Locked -->
+<div class="roadmap-node flex justify-between items-center w-full mb-xl opacity-50 grayscale">
+<div class="w-5/12 text-right pr-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant">Eye Contact</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Giao tiếp bằng mắt</p>
+</div>
+<div class="w-16 h-16 bg-surface-variant rounded-full flex justify-center items-center border-4 border-surface">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1; font-size: 32px;">lock</span>
+</div>
+<div class="w-5/12 pl-md">
+<div class="bg-surface-container-high p-md rounded-xl border border-surface-variant inline-block">
+<span class="inline-block bg-surface-variant text-on-surface-variant font-label-sm text-label-sm px-sm py-xs rounded-full mb-xs">Sắp tới / Upcoming</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Connecting with the audience.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

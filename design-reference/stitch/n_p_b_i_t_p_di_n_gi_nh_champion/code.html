@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Assignment - SpeakUp Kids</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary-container": "#fffbff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#785900",
+                      "surface-container": "#f0eded",
+                      "secondary-fixed": "#ffdad5",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "surface": "#fcf9f8",
+                      "on-surface": "#1b1c1c",
+                      "on-tertiary-fixed": "#2c1600",
+                      "tertiary-fixed-dim": "#ffb870",
+                      "outline-variant": "#d4c5ab",
+                      "inverse-surface": "#303030",
+                      "primary-fixed-dim": "#fabd00",
+                      "primary-fixed": "#ffdf9e",
+                      "secondary-fixed-dim": "#ffb4a9",
+                      "surface-bright": "#fcf9f8",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-container": "#dc3128",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-background": "#1b1c1c",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#6d5100",
+                      "surface-tint": "#785900",
+                      "tertiary": "#8b5000",
+                      "tertiary-container": "#ffbe7e",
+                      "surface-dim": "#dcd9d9",
+                      "on-primary-fixed": "#261a00",
+                      "outline": "#827660",
+                      "on-primary-fixed-variant": "#5b4300",
+                      "secondary": "#b81311",
+                      "on-secondary-fixed-variant": "#930005",
+                      "on-tertiary-fixed-variant": "#693c00",
+                      "background": "#fcf9f8",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#4f4632",
+                      "surface-variant": "#e5e2e1",
+                      "primary-container": "#ffc107",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#7e4900",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#fabd00",
+                      "tertiary-fixed": "#ffdcbe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "sm": "12px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Be Vietnam Pro"],
+                      "label-sm": ["Be Vietnam Pro"],
+                      "headline-lg-mobile": ["Be Vietnam Pro"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "display-lg": ["Be Vietnam Pro"],
+                      "body-md": ["Be Vietnam Pro"],
+                      "headline-md": ["Be Vietnam Pro"],
+                      "label-md": ["Be Vietnam Pro"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .drag-active {
+            border-color: #FFC107 !important;
+            background-color: #fff9e6 !important;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-64 flex flex-col p-md border-r border-outline-variant bg-surface-container-low hidden md:flex z-50">
+<div class="mb-lg">
+<h1 class="font-headline-md text-headline-md text-primary">SpeakUp Kids</h1>
+</div>
+<div class="flex items-center gap-sm mb-lg">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0">
+<img alt="Student Profile Picture" class="w-full h-full object-cover" data-alt="A portrait of a cheerful young Vietnamese student in a bright yellow shirt, standing against a vibrant, sunny orange background. The lighting is warm and optimistic, capturing a modern, kid-friendly educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7NJ7L1ZBV4DDjyWQkYN3IagTj7lFpHKKAFIyrHox6j65Gff1XQABjMWBZdtVqn9x7IWCmsVPhgue0XCK0B9qD8qtz03prqWSkH9PfBH0uvYdeH1H16wl8whb87SrIZu2qHEphrpqW8NKVvQm5ddCuqmS1yFUTg_M9nH0fJtaKH0Czv7T1PhRy0f4rXwDz1hhblfh_ksPwOKIeL5tLP9EYNcvwYqwllrca7_OJv1i33icrQem9ujG"/>
+</div>
+<div>
+<h2 class="font-label-md text-label-md font-bold text-on-surface">Chào, Minh!</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Future Orator</p>
+</div>
+</div>
+<div class="mb-md">
+<button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-sm px-md rounded-full font-bold hover:opacity-90 transition-opacity">
+                Start Practice
+            </button>
+</div>
+<ul class="flex flex-col gap-xs flex-grow">
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span>Learning Journey</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="mic_external_on">mic_external_on</span>
+<span>Practice Room</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>My Lessons</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-sm py-sm bg-primary-container text-on-primary-container rounded-lg font-bold font-label-md text-label-md translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="upload_file" style="font-variation-settings: 'FILL' 1;">upload_file</span>
+<span>Assignments</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span>Achievements</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto border-t border-outline-variant pt-md">
+<ul class="flex flex-col gap-xs">
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 h-full overflow-y-auto bg-surface relative">
+<!-- Top Nav Mobile Fallback (Hidden on Desktop) -->
+<header class="md:hidden flex items-center justify-between p-margin-mobile border-b border-outline-variant bg-surface sticky top-0 z-40">
+<h1 class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary">SpeakUp Kids</h1>
+<button class="text-on-surface">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<div class="max-w-5xl mx-auto p-margin-mobile md:p-margin-desktop py-lg">
+<!-- Header Section -->
+<div class="mb-xl">
+<div class="inline-block bg-error-container text-on-error-container px-sm py-xs rounded-full font-label-sm text-label-sm mb-sm border border-secondary-container">
+                    Assignment / Bài tập
+                </div>
+<h1 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-on-surface mb-xs">Submit Assignment</h1>
+<h2 class="font-headline-md text-headline-md text-on-surface-variant mb-md">Nộp Bài: Diễn Giả Nhí</h2>
+<p class="font-body-lg text-body-lg text-on-surface max-w-3xl">
+                    Please upload your video presentation below. Make sure your video is clear and your voice is loud and confident! 
+                    <br/><span class="text-on-surface-variant mt-2 block text-sm">Vui lòng tải lên video bài thuyết trình của bạn dưới đây. Đảm bảo video rõ nét và giọng nói to, tự tin nhé!</span>
+</p>
+</div>
+<!-- Bento Grid Layout for Submission -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Video Upload Area (Spans 2 columns on large screens) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl border-2 border-dashed border-outline-variant p-lg flex flex-col items-center justify-center text-center transition-all duration-300 relative group" id="drop-zone">
+<div class="absolute inset-0 bg-primary-container opacity-0 group-hover:opacity-10 transition-opacity rounded-xl pointer-events-none"></div>
+<div class="w-20 h-20 bg-surface-container-high rounded-full flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Drag &amp; Drop your video here</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Kéo và thả video của bạn vào đây</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-md">Supported formats: MP4, MOV (Max 500MB)</p>
+<div class="flex gap-sm">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md py-sm px-lg rounded-full font-bold hover:shadow-[0_8px_24px_rgba(255,152,0,0.15)] transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-xl" data-icon="folder_open">folder_open</span>
+                            Browse Files
+                        </button>
+<button class="border-2 border-secondary text-secondary font-label-md text-label-md py-sm px-lg rounded-full font-bold hover:bg-error-container transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-xl" data-icon="videocam">videocam</span>
+                            Record Now
+                        </button>
+</div>
+<input accept="video/mp4,video/quicktime" class="hidden" id="file-input" type="file"/>
+</div>
+<!-- Submission Details Form -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant p-md shadow-sm flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+                        Details
+                    </h3>
+<form class="flex flex-col gap-md flex-grow">
+<!-- Title Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs font-bold" for="title">
+                                Presentation Title <span class="text-secondary">*</span>
+<span class="block text-xs font-normal text-on-surface-variant">Tiêu đề bài thuyết trình</span>
+</label>
+<input class="w-full bg-surface-container-low border-2 border-outline-variant rounded-lg p-sm font-body-md text-on-surface focus:border-primary-fixed-dim focus:ring-0 focus:outline-none transition-colors" id="title" placeholder="e.g., My Dream Holiday" type="text"/>
+</div>
+<!-- Notes Field -->
+<div class="flex-grow flex flex-col">
+<label class="block font-label-md text-label-md text-on-surface mb-xs font-bold" for="notes">
+                                Notes for Teacher
+                                <span class="block text-xs font-normal text-on-surface-variant">Ghi chú cho giáo viên</span>
+</label>
+<textarea class="w-full flex-grow bg-surface-container-low border-2 border-outline-variant rounded-lg p-sm font-body-md text-on-surface focus:border-primary-fixed-dim focus:ring-0 focus:outline-none transition-colors resize-none" id="notes" placeholder="I found pronouncing 'th' difficult in this video..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="mt-auto pt-md border-t border-surface-variant">
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm px-md rounded-full font-bold hover:bg-on-secondary-fixed-variant transition-colors flex items-center justify-center gap-xs min-h-[48px] shadow-[0_8px_24px_rgba(255,152,0,0.15)]" type="button">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                                Submit / Nộp Bài
+                            </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Assignment Info Card (Bottom) -->
+<div class="mt-xl bg-surface-container-lowest rounded-xl border border-surface-variant p-md flex flex-col md:flex-row gap-md items-start md:items-center">
+<div class="w-16 h-16 bg-tertiary-container rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl text-on-tertiary-container" data-icon="assignment">assignment</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-xs">Assignment Guidelines</h4>
+<ul class="font-body-md text-sm text-on-surface-variant list-disc pl-5 space-y-1">
+<li>Speak clearly and maintain eye contact with the camera.</li>
+<li>Ensure good lighting so your face is visible.</li>
+<li>Keep the video length between 2 to 4 minutes.</li>
+</ul>
+</div>
+<div class="shrink-0 text-right">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-xs">Due Date</p>
+<p class="font-headline-md text-headline-md text-secondary font-bold">Oct 15</p>
+<p class="text-xs text-on-surface-variant">11:59 PM</p>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Simple drag and drop visual feedback
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.classList.add('drag-active');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('drag-active');
+        }
+        
+        dropZone.addEventListener('click', () => fileInput.click());
+    </script>
+</body></html>
