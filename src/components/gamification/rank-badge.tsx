@@ -3,13 +3,13 @@ import { cn } from "@/lib/utils/cn";
 import type { RankSlug } from "@/config/gamification";
 
 const RANK_COLORS: Record<RankSlug, string> = {
-  "beginner-speaker": "bg-slate-100 text-slate-700",
-  "bronze-speaker": "bg-amber-100 text-amber-800",
-  "silver-speaker": "bg-slate-200 text-slate-800",
-  "gold-speaker": "bg-brand-gold/20 text-brand-gold",
-  "platinum-speaker": "bg-cyan-100 text-cyan-800",
-  "royal-speaker": "bg-brand-royal/15 text-brand-royal",
-  "master-speaker": "bg-brand-navy text-white",
+  "beginner-speaker": "bg-surface-container-highest text-on-surface-variant",
+  "bronze-speaker": "bg-tertiary-fixed text-on-tertiary-fixed",
+  "silver-speaker": "bg-surface-variant text-on-surface-variant",
+  "gold-speaker": "bg-primary-fixed text-on-primary-fixed",
+  "platinum-speaker": "bg-secondary-fixed text-on-secondary-fixed-variant",
+  "royal-speaker": "bg-primary text-on-primary",
+  "master-speaker": "bg-inverse-surface text-inverse-on-surface",
 };
 
 export function RankBadge({

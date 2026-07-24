@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export function PublicFooter() {
   return (
-    <footer className="border-t border-border bg-brand-navy text-slate-300">
+    <footer className="border-t border-border bg-brand-navy text-inverse-on-surface/70">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           <div>
@@ -28,7 +28,7 @@ export function PublicFooter() {
             </ul>
           </div>
         </div>
-        <p className="mt-8 border-t border-white/10 pt-6 text-xs text-slate-400">
+        <p className="mt-8 border-t border-white/10 pt-6 text-xs text-inverse-on-surface/50">
           © {new Date().getFullYear()} {siteConfig.organization}. Thông tin liên hệ chính thức sẽ được cập nhật.
         </p>
       </div>
