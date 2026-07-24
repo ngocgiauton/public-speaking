@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Practice Room - SpeakUp Kids</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#785900",
+                    "surface-container": "#f0eded",
+                    "secondary-fixed": "#ffdad5",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "surface": "#fcf9f8",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary-fixed": "#2c1600",
+                    "tertiary-fixed-dim": "#ffb870",
+                    "outline-variant": "#d4c5ab",
+                    "inverse-surface": "#303030",
+                    "primary-fixed-dim": "#fabd00",
+                    "primary-fixed": "#ffdf9e",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "surface-bright": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-container": "#dc3128",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-background": "#1b1c1c",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#6d5100",
+                    "surface-tint": "#785900",
+                    "tertiary": "#8b5000",
+                    "tertiary-container": "#ffbe7e",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed": "#261a00",
+                    "outline": "#827660",
+                    "on-primary-fixed-variant": "#5b4300",
+                    "secondary": "#b81311",
+                    "on-secondary-fixed-variant": "#930005",
+                    "on-tertiary-fixed-variant": "#693c00",
+                    "background": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#4f4632",
+                    "surface-variant": "#e5e2e1",
+                    "primary-container": "#ffc107",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-container": "#7e4900",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#fabd00",
+                    "tertiary-fixed": "#ffdcbe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "display-lg": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .warm-shadow {
+            box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f6f3f2; 
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ffc107; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #fabd00; 
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-surface-container-lowest fixed left-0 top-0 h-full w-64 flex flex-col p-md border-r border-outline-variant z-40 hidden md:flex">
+<div class="mb-lg flex flex-col items-center">
+<img alt="Student Profile Picture" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-primary-container warm-shadow" data-alt="A brightly lit, cheerful studio portrait of a young boy smiling confidently. He has neat dark hair and is wearing a clean, bright orange polo shirt. The background is a soft, solid yellow, emphasizing a warm, enthusiastic, and modern light-mode aesthetic perfect for a children's public speaking platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBft_4IcMM6BCSpfLlvcQn0xKAZZI7VG6lQ4KtAz-cbw3BL37imBIHp0RW6-g2KWuAmt4DwCpe23Ea3Yqpz6RJCP-q4QMHRifs-Iubo1ygTIk7qDbwpLAcZKczOZOCd-Wq73pMFoFeLWhdXlW7A42c1ZSwWvpleFDQtSu-8q65MkQ6xHFmzp4Fn6ABmGQZHlThYTHfAROP0LombMIbXp2osGCEC5QfPrRUS7L9kougYJS6SgJzjz4K1"/>
+<h2 class="font-headline-md text-headline-md text-primary text-center">Chào, Minh!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-center mt-1">Future Orator</p>
+</div>
+<ul class="flex-1 space-y-sm custom-scrollbar overflow-y-auto pr-2">
+<li>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 0;">map</span>
+                    Learning Journey
+                </a>
+</li>
+<li>
+<a class="flex items-center px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold hover:bg-surface-container-highest transition-all translate-x-1 transition-transform font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">mic_external_on</span>
+                    Practice Room
+                </a>
+</li>
+<li>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+                    My Lessons
+                </a>
+</li>
+<li>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 0;">upload_file</span>
+                    Assignments
+                </a>
+</li>
+<li>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 0;">emoji_events</span>
+                    Achievements
+                </a>
+</li>
+</ul>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-3 rounded-full hover:bg-primary-fixed-dim transition-colors warm-shadow mb-4 flex items-center justify-center min-h-[48px]">
+<span class="material-symbols-outlined mr-2">play_arrow</span>
+                Start Practice
+            </button>
+<ul class="space-y-2">
+<li>
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+                        Settings
+                    </a>
+</li>
+<li>
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-3">help</span>
+                        Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 p-margin-mobile md:p-margin-desktop min-h-screen">
+<!-- Header Section -->
+<header class="mb-xl flex flex-col md:flex-row md:items-end justify-between gap-md">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-2">Practice Room <br/><span class="font-headline-lg text-headline-lg text-secondary">Phòng Tập Luyện</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Choose a skill to focus on today. Great speakers are built one habit at a time. <br/><span class="text-sm">Chọn một kỹ năng để tập trung hôm nay. Những diễn giả xuất sắc được hình thành từ từng thói quen nhỏ.</span></p>
+</div>
+<div class="flex items-center gap-sm bg-surface-container px-4 py-2 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-md text-label-md text-primary font-bold">5 Day Streak!</span>
+</div>
+</header>
+<!-- Bento Grid for Skills -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Skill Card: Eye Contact -->
+<div class="bg-surface rounded-xl p-md border border-surface-variant hover:border-primary-fixed-dim transition-all duration-300 warm-shadow flex flex-col h-full relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Level 1: Beginner</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 relative z-10">Eye Contact</h3>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-4 relative z-10">Giao Tiếp Mắt</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">Practice looking at your audience to build trust and connection.</p>
+<button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-3 rounded-full hover:bg-primary-fixed-dim transition-colors min-h-[48px] relative z-10 flex items-center justify-center">
+                    Start <span class="mx-1">•</span> Bắt đầu
+                </button>
+</div>
+<!-- Skill Card: Pronunciation -->
+<div class="bg-surface rounded-xl p-md border border-surface-variant hover:border-primary-fixed-dim transition-all duration-300 warm-shadow flex flex-col h-full relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Level 2: Intermediate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 relative z-10">Pronunciation</h3>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-4 relative z-10">Phát Âm</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">Work on clear articulation and speaking loudly enough for everyone to hear.</p>
+<button class="w-full bg-surface border-2 border-primary-fixed-dim text-primary font-label-md text-label-md py-3 rounded-full hover:bg-surface-container-low transition-colors min-h-[48px] relative z-10 flex items-center justify-center">
+                    Start <span class="mx-1">•</span> Bắt đầu
+                </button>
+</div>
+<!-- Skill Card: Storytelling -->
+<div class="bg-surface rounded-xl p-md border border-surface-variant hover:border-primary-fixed-dim transition-all duration-300 warm-shadow flex flex-col h-full relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Level 3: Advanced</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 relative z-10">Storytelling</h3>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-4 relative z-10">Kể Chuyện</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">Learn how to structure a narrative with a strong beginning, middle, and end.</p>
+<button class="w-full bg-surface border-2 border-primary-fixed-dim text-primary font-label-md text-label-md py-3 rounded-full hover:bg-surface-container-low transition-colors min-h-[48px] relative z-10 flex items-center justify-center">
+                    Start <span class="mx-1">•</span> Bắt đầu
+                </button>
+</div>
+<!-- Skill Card: Gesture -->
+<div class="bg-surface rounded-xl p-md border border-surface-variant hover:border-primary-fixed-dim transition-all duration-300 warm-shadow flex flex-col h-full relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">waving_hand</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Level 1: Beginner</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 relative z-10">Gesture</h3>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-4 relative z-10">Cử Chỉ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">Use your hands and body language to emphasize key points naturally.</p>
+<button class="w-full bg-surface border-2 border-primary-fixed-dim text-primary font-label-md text-label-md py-3 rounded-full hover:bg-surface-container-low transition-colors min-h-[48px] relative z-10 flex items-center justify-center">
+                    Start <span class="mx-1">•</span> Bắt đầu
+                </button>
+</div>
+<!-- Skill Card: Pace -->
+<div class="bg-surface rounded-xl p-md border border-surface-variant hover:border-primary-fixed-dim transition-all duration-300 warm-shadow flex flex-col h-full relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Level 2: Intermediate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 relative z-10">Pace</h3>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-4 relative z-10">Tốc Độ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">Master the art of pausing and controlling the speed of your speech.</p>
+<button class="w-full bg-surface border-2 border-primary-fixed-dim text-primary font-label-md text-label-md py-3 rounded-full hover:bg-surface-container-low transition-colors min-h-[48px] relative z-10 flex items-center justify-center">
+                    Start <span class="mx-1">•</span> Bắt đầu
+                </button>
+</div>
+<!-- Skill Card: Opening -->
+<div class="bg-surface rounded-xl p-md border border-surface-variant hover:border-primary-fixed-dim transition-all duration-300 warm-shadow flex flex-col h-full relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">door_open</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full">Level 3: Advanced</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 relative z-10">Opening</h3>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-4 relative z-10">Mở Đầu</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">Craft compelling hooks to grab the audience's attention from the very first second.</p>
+<button class="w-full bg-surface border-2 border-primary-fixed-dim text-primary font-label-md text-label-md py-3 rounded-full hover:bg-surface-container-low transition-colors min-h-[48px] relative z-10 flex items-center justify-center">
+                    Start <span class="mx-1">•</span> Bắt đầu
+                </button>
+</div>
+</div>
+</main>
+</body></html>

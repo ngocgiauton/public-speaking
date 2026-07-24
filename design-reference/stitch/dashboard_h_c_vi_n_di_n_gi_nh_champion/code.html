@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diễn Giả Nhí - Student Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#410001",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#785900",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#ffdad5",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "surface": "#fcf9f8",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-fixed": "#2c1600",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "outline-variant": "#d4c5ab",
+                        "inverse-surface": "#303030",
+                        "primary-fixed-dim": "#fabd00",
+                        "primary-fixed": "#ffdf9e",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-container": "#dc3128",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-background": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#6d5100",
+                        "surface-tint": "#785900",
+                        "tertiary": "#8b5000",
+                        "tertiary-container": "#ffbe7e",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed": "#261a00",
+                        "outline": "#827660",
+                        "on-primary-fixed-variant": "#5b4300",
+                        "secondary": "#b81311",
+                        "on-secondary-fixed-variant": "#930005",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "background": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#4f4632",
+                        "surface-variant": "#e5e2e1",
+                        "primary-container": "#ffc107",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-container": "#7e4900",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#fabd00",
+                        "tertiary-fixed": "#ffdcbe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fcf9f8; /* background */
+        }
+        .warm-shadow {
+            box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background flex min-h-screen">
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full w-64 flex-col p-md border-r border-outline-variant bg-surface-container-low z-40">
+<div class="mb-xl flex items-center justify-center">
+<img alt="SpeakUp Kids Logo" class="w-32 h-32 object-contain rounded-full warm-shadow border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYzKx02_9NHMreiZEdNmndUs9bPbKcX8oBGbJCMPunCYvKNeg-mRww-pLgarvM5UwIErF9cK2eT5JH6yBOax5xoGDMRHfS9fUszCqMd2e4eD1BiNGtqPWb627mz5RfKdoB0vCHQinBysT_LGj_UBXkIM6Iq5pu-N6ehA1096TdipvWqotkM-PqZqg4gW_HnlfrWibA9iAj5aPIfJ9wTkFBWQYS6PKC_2D3X0M0QJCwGa5psZeIIC8tkuTdmk3dAx95rg"/>
+</div>
+<div class="flex-1 overflow-y-auto space-y-sm">
+<a class="flex items-center gap-sm p-sm bg-primary-container text-on-primary-container rounded-lg font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">map</span>
+<span>Learning Journey</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">mic_external_on</span>
+<span>Practice Room</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>My Lessons</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">upload_file</span>
+<span>Assignments</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Achievements</span>
+</a>
+</div>
+<div class="mt-auto pt-lg border-t border-outline-variant">
+<button class="w-full h-12 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-sm hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">play_arrow</span>
+                Start Practice
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop min-h-screen">
+<!-- Header -->
+<header class="mb-xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-xs">Xin chào, Minh! 🌟</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Welcome back, Future Orator. Let's make your voice heard today!</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Progress Module (Spans 8 cols on desktop) -->
+<section class="col-span-1 md:col-span-8 bg-surface-container-lowest rounded-xl p-md border border-surface-variant warm-shadow">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Current Module: <span class="text-tertiary">Storytelling</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Module Hiện Tại: Kể Chuyện</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary-container">75%</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden mb-sm">
+<div class="h-full bg-gradient-to-r from-[#FF9800] to-[#FFC107] rounded-full" style="width: 75%;"></div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-right">3/4 Lessons Completed (3/4 Bài học đã hoàn thành)</p>
+<div class="mt-lg grid grid-cols-1 sm:grid-cols-2 gap-sm">
+<button class="h-12 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md font-bold warm-shadow hover:scale-95 transition-transform">
+                        Continue Lesson (Tiếp tục bài học)
+                    </button>
+<button class="h-12 border-2 border-[#FF9800] text-[#FF9800] rounded-lg font-label-md text-label-md font-bold hover:bg-surface-container transition-colors">
+                        Review Notes (Xem lại ghi chú)
+                    </button>
+</div>
+</section>
+<!-- Recent Achievements (Spans 4 cols) -->
+<section class="col-span-1 md:col-span-4 bg-surface-container-lowest rounded-xl p-md border border-surface-variant">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Recent Badges<br/><span class="font-body-md text-body-md font-normal text-on-surface-variant">Huy hiệu gần đây</span></h2>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-md p-sm bg-surface-container-low rounded-lg border border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 24px;">local_fire_department</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">3-Day Streak</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Chuỗi 3 ngày</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-sm bg-surface-container-low rounded-lg border border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 24px;">campaign</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Loud &amp; Clear</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">To và Rõ ràng</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

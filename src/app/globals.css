@@ -1,21 +1,86 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens — chuyển thể từ hệ thống thiết kế Material Design 3 do
+ * Google Stitch xuất ra (xem design-reference/stitch/champion_oratory/DESIGN.md).
+ * Bảng màu ấm (vàng/đỏ/cam), không dùng xanh dương, font Be Vietnam Pro.
+ */
 :root {
-  --color-royal-blue: #1e40af;
-  --color-dark-navy: #0f172a;
-  --color-gold: #f59e0b;
-  --color-white: #ffffff;
-  --color-light-gray: #f8fafc;
+  /* Surface */
+  --color-surface: #fcf9f8;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-bright: #fcf9f8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-surface-variant: #e5e2e1;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #4f4632;
+  --color-inverse-surface: #303030;
+  --color-inverse-on-surface: #f3f0ef;
+  --color-outline: #827660;
+  --color-outline-variant: #d4c5ab;
+
+  /* Primary (gold) */
+  --color-surface-tint: #785900;
+  --color-primary: #785900;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ffc107;
+  --color-on-primary-container: #6d5100;
+  --color-inverse-primary: #fabd00;
+  --color-primary-fixed: #ffdf9e;
+  --color-primary-fixed-dim: #fabd00;
+  --color-on-primary-fixed: #261a00;
+  --color-on-primary-fixed-variant: #5b4300;
+
+  /* Secondary (red) */
+  --color-secondary: #b81311;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dc3128;
+  --color-on-secondary-container: #fffbff;
+  --color-secondary-fixed: #ffdad5;
+  --color-secondary-fixed-dim: #ffb4a9;
+  --color-on-secondary-fixed: #410001;
+  --color-on-secondary-fixed-variant: #930005;
+
+  /* Tertiary (orange) */
+  --color-tertiary: #8b5000;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #ffbe7e;
+  --color-on-tertiary-container: #7e4900;
+  --color-tertiary-fixed: #ffdcbe;
+  --color-tertiary-fixed-dim: #ffb870;
+  --color-on-tertiary-fixed: #2c1600;
+  --color-on-tertiary-fixed-variant: #693c00;
+
+  /* Error + trạng thái */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
   --color-success: #16a34a;
   --color-warning: #d97706;
-  --color-error: #dc2626;
 
-  --background: var(--color-white);
-  --foreground: var(--color-dark-navy);
-  --muted: var(--color-light-gray);
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
-  --ring: var(--color-royal-blue);
+  --color-background: #fcf9f8;
+  --color-on-background: #1b1c1c;
+
+  /* Alias cho các component đã có sẵn trong app (không đổi tên class dùng
+     ở khắp nơi — chỉ đổi giá trị màu bên dưới để khớp thiết kế mới) */
+  --background: var(--color-surface);
+  --foreground: var(--color-on-surface);
+  --muted: var(--color-surface-container-low);
+  --muted-foreground: var(--color-on-surface-variant);
+  --border: var(--color-outline-variant);
+  --ring: var(--color-tertiary);
+
+  --color-brand-royal: var(--color-primary);
+  --color-brand-navy: var(--color-inverse-surface);
+  --color-brand-gold: var(--color-primary-container);
+  --color-brand-success: var(--color-success);
+  --color-brand-warning: var(--color-warning);
+  --color-brand-error: var(--color-error);
 }
 
 @theme inline {
@@ -26,28 +91,124 @@
   --color-border: var(--border);
   --color-ring: var(--ring);
 
-  --color-brand-royal: var(--color-royal-blue);
-  --color-brand-navy: var(--color-dark-navy);
-  --color-brand-gold: var(--color-gold);
-  --color-brand-success: var(--color-success);
-  --color-brand-warning: var(--color-warning);
-  --color-brand-error: var(--color-error);
+  --color-brand-royal: var(--color-brand-royal);
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-gold: var(--color-brand-gold);
+  --color-brand-success: var(--color-brand-success);
+  --color-brand-warning: var(--color-brand-warning);
+  --color-brand-error: var(--color-brand-error);
 
-  --font-heading: var(--font-poppins);
-  --font-sans: var(--font-inter);
+  /* Token M3 đầy đủ — dùng trực tiếp khi chuyển đổi HTML từ Stitch
+     (bg-primary-container, text-on-surface-variant, v.v.) */
+  --color-surface: var(--color-surface);
+  --color-surface-dim: var(--color-surface-dim);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-container-lowest: var(--color-surface-container-lowest);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-surface-variant: var(--color-surface-variant);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-inverse-surface: var(--color-inverse-surface);
+  --color-inverse-on-surface: var(--color-inverse-on-surface);
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
 
-  --radius-card: 1rem;
-  --radius-control: 0.625rem;
-}
+  --color-surface-tint: var(--color-surface-tint);
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-on-primary-container: var(--color-on-primary-container);
+  --color-inverse-primary: var(--color-inverse-primary);
+  --color-primary-fixed: var(--color-primary-fixed);
+  --color-primary-fixed-dim: var(--color-primary-fixed-dim);
+  --color-on-primary-fixed: var(--color-on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--color-on-primary-fixed-variant);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--color-dark-navy);
-    --foreground: #f1f5f9;
-    --muted: #1e293b;
-    --muted-foreground: #94a3b8;
-    --border: #334155;
-  }
+  --color-secondary: var(--color-secondary);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+  --color-secondary-fixed: var(--color-secondary-fixed);
+  --color-secondary-fixed-dim: var(--color-secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--color-on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--color-on-secondary-fixed-variant);
+
+  --color-tertiary: var(--color-tertiary);
+  --color-on-tertiary: var(--color-on-tertiary);
+  --color-tertiary-container: var(--color-tertiary-container);
+  --color-on-tertiary-container: var(--color-on-tertiary-container);
+  --color-tertiary-fixed: var(--color-tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--color-tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--color-on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--color-on-tertiary-fixed-variant);
+
+  --color-error: var(--color-error);
+  --color-on-error: var(--color-on-error);
+  --color-error-container: var(--color-error-container);
+  --color-on-error-container: var(--color-on-error-container);
+  --color-on-background: var(--color-on-background);
+
+  /* Font — Be Vietnam Pro duy nhất, giữ nguyên tên biến --font-heading /
+     --font-sans để không phải sửa lại các component đã dùng chúng, đồng
+     thời thêm alias theo đúng tên class trong mockup Stitch. */
+  --font-heading: var(--font-be-vietnam-pro);
+  --font-sans: var(--font-be-vietnam-pro);
+  --font-display-lg: var(--font-be-vietnam-pro);
+  --font-headline-lg: var(--font-be-vietnam-pro);
+  --font-headline-lg-mobile: var(--font-be-vietnam-pro);
+  --font-headline-md: var(--font-be-vietnam-pro);
+  --font-body-lg: var(--font-be-vietnam-pro);
+  --font-body-md: var(--font-be-vietnam-pro);
+  --font-label-md: var(--font-be-vietnam-pro);
+  --font-label-sm: var(--font-be-vietnam-pro);
+
+  /* Thang chữ đặt tên theo mockup (text-display-lg, text-headline-md...) */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--font-weight: 800;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--font-weight: 700;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 700;
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--font-weight: 600;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--font-weight: 700;
+
+  /* Bo góc theo mockup — radius-card/radius-control giữ tên cũ để tương
+     thích component có sẵn (Button/Card/Input...), map sang giá trị mới. */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  --radius-card: var(--radius-lg);
+  --radius-control: var(--radius);
+
+  /* Không đặt tên riêng cho spacing (xs/sm/md/lg/xl...): Tailwind v4 dùng
+     chung namespace --spacing-* cho MỌI utility liên quan kích thước
+     (gap/p/m/w/h/max-w/min-w/inset...). Đặt --spacing-lg sẽ vô tình ghi đè
+     max-w-lg/w-lg/h-lg... trên toàn bộ app. Vì mọi giá trị trong mockup đều
+     là bội số của 4px, dùng thẳng thang số mặc định của Tailwind:
+     xs=4px→1, sm=12px→3, md=24px→6, lg=48px→12, xl=80px→20, gutter=24px→6,
+     margin-mobile=16px→4, margin-desktop=64px→16, base=8px→2. */
 }
 
 body {
@@ -65,8 +226,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-royal-blue);
+  outline: 2px solid var(--color-tertiary);
   outline-offset: 2px;
+}
+
+.shadow-warm {
+  box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
 }
 
 .skip-link {
@@ -74,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -9999px;
   top: 0;
   z-index: 100;
-  background: var(--color-royal-blue);
+  background: var(--color-primary);
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 0 0 0.5rem 0;

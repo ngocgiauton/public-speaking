@@ -14,7 +14,7 @@ export function Progress({
   const clamped = Math.min(100, Math.max(0, value));
   return (
     <div
-      className={cn("h-2 w-full overflow-hidden rounded-full bg-muted", className)}
+      className={cn("h-3 w-full overflow-hidden rounded-full bg-surface-container-high", className)}
       role="progressbar"
       aria-valuenow={clamped}
       aria-valuemin={0}
@@ -22,7 +22,10 @@ export function Progress({
       aria-label={label}
     >
       <div
-        className={cn("h-full rounded-full bg-brand-royal transition-all", barClassName)}
+        className={cn(
+          "h-full rounded-full bg-gradient-to-r from-tertiary to-primary-container transition-all",
+          barClassName,
+        )}
         style={{ width: `${clamped}%` }}
       />
     </div>
