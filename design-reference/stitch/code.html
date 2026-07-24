@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SpeakUp Kids - Diễn Giả Nhí</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary-container": "#fffbff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#785900",
+                      "surface-container": "#f0eded",
+                      "secondary-fixed": "#ffdad5",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "surface": "#fcf9f8",
+                      "on-surface": "#1b1c1c",
+                      "on-tertiary-fixed": "#2c1600",
+                      "tertiary-fixed-dim": "#ffb870",
+                      "outline-variant": "#d4c5ab",
+                      "inverse-surface": "#303030",
+                      "primary-fixed-dim": "#fabd00",
+                      "primary-fixed": "#ffdf9e",
+                      "secondary-fixed-dim": "#ffb4a9",
+                      "surface-bright": "#fcf9f8",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-container": "#dc3128",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-background": "#1b1c1c",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#6d5100",
+                      "surface-tint": "#785900",
+                      "tertiary": "#8b5000",
+                      "tertiary-container": "#ffbe7e",
+                      "surface-dim": "#dcd9d9",
+                      "on-primary-fixed": "#261a00",
+                      "outline": "#827660",
+                      "on-primary-fixed-variant": "#5b4300",
+                      "secondary": "#b81311",
+                      "on-secondary-fixed-variant": "#930005",
+                      "on-tertiary-fixed-variant": "#693c00",
+                      "background": "#fcf9f8",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#4f4632",
+                      "surface-variant": "#e5e2e1",
+                      "primary-container": "#ffc107",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#7e4900",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#fabd00",
+                      "tertiary-fixed": "#ffdcbe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "sm": "12px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-sm": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg-mobile": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "display-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-md": [
+                              "Be Vietnam Pro"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .shadow-warm {
+            box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-[72px] bg-surface bg-surface-bright shadow-sm transition-all duration-300">
+<div class="flex items-center gap-sm">
+<img alt="SpeakUp Kids Logo" class="h-10 w-10 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfYLpqrd7t9NWWUdA4mXWDlVleZN37_DJm2xgSoQ0yreHp58q3IbzOYXj0v8Trn29OpOyzOZCSzM1oiwGpYtqfxrFJKsrLU0baIJKDXpHBYS4T8LrF_OtH8ftmyarcxMv-q46XI9tio6u2X_B8OgSTJtstHlK2YpAXkcM6xZFstNEppvPdZOoncHFN4XdW12-uk_IOY3gJsn0Qsimp0iufQdvUgDG33o-9rt_iM0QFlnafAdMkjwafvSKtBjAw3wxXuQ"/>
+<span class="font-display-lg text-headline-md text-primary hidden md:block">SpeakUp Kids</span>
+</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Programs</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Workshops</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Success Stories</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200 scale-95 transition-transform" href="#">About Us</a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="font-label-md text-label-md text-primary hover:bg-surface-container-low px-4 py-2 rounded-lg transition-colors min-h-[48px] hidden sm:block">Student Login</button>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md font-bold px-6 py-2 rounded-full shadow-warm hover:scale-105 transition-transform min-h-[48px]">Join Now</button>
+</div>
+</nav>
+<main class="flex-grow flex flex-col gap-xl pb-xl">
+<!-- Hero Section -->
+<section class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop pt-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col gap-md z-10">
+<h1 class="font-display-lg text-display-lg text-on-surface">
+                        Find Your Voice.<br/>
+<span class="text-primary">Change Your World.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Empowering children with the confidence to speak clearly, passionately, and authentically. (Trang bị cho trẻ em sự tự tin để nói rõ ràng, say mê và chân thực.)
+                    </p>
+<div class="flex gap-sm pt-sm">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md font-bold px-8 py-3 rounded-full shadow-warm hover:scale-105 transition-transform min-h-[48px]">Explore Programs</button>
+<button class="border-2 border-outline text-primary font-label-md text-label-md font-bold px-8 py-3 rounded-full hover:bg-surface-container-low transition-colors min-h-[48px]">Watch Video</button>
+</div>
+</div>
+<div class="relative h-[400px] md:h-[600px] rounded-[32px] overflow-hidden shadow-warm">
+<img class="w-full h-full object-cover" data-alt="A vibrant, high-contrast, sun-drenched photo of an enthusiastic child standing on a brightly lit stage holding a microphone, beaming with budding confidence. Warm golden-hour lighting emphasizes the warmth and optimism of the moment. The background is a soft, modern minimalist environment with subtle warm orange and yellow geometric accents. High-end photography, optimistic, inspiring, child empowerment, high key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj2JHPc_p-mpW1XoTCNK35_DjuOr9D3vloIx3UbovQ26htuNSPEc6zToggw_n0Q1VFvmhs2NaDdFCHLTkJqKg-NxTvTOr8WTQgv-PfAvVUBKa4Ty9tcee9ITffYUftJ-QSdUFXUrSyvvNA0-MHEjTf4-1VPJwgch1sEBtceeaKlreXwoBGmrCg4486o3Xz4Vhb3EucVALb7Dq64TGQRjU5DpbUmIQU6J37tVL-0iSxJg58Z2CNKsah"/>
+</div>
+</div>
+</section>
+<!-- Core Pillars Section (Bento Grid) -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs">Our Core Pillars</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The foundations of great oratory (Nền tảng của nghệ thuật hùng biện xuất sắc)</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-[250px]">
+<!-- Body Language (Span 2 col) -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-3xl p-md flex flex-col justify-between border border-surface-variant hover:shadow-warm transition-all group overflow-hidden relative">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-secondary-container opacity-10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+<div class="z-10">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-on-secondary-fixed" style="font-variation-settings: 'FILL' 1;">directions_run</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Body Language</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Ngôn Ngữ Cơ Thể</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Master non-verbal communication. Learn to command the stage with posture and expressive gestures.</p>
+</div>
+</div>
+<!-- Voice -->
+<div class="bg-surface-container-lowest rounded-3xl p-md flex flex-col justify-between border border-surface-variant hover:shadow-warm transition-all group relative overflow-hidden">
+<div class="absolute -right-5 -bottom-5 w-32 h-32 bg-tertiary-container opacity-20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+<div class="z-10">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-on-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Voice</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Giọng Nói</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Develop a resonant, clear, and powerful vocal presence.</p>
+</div>
+</div>
+<!-- Content -->
+<div class="bg-surface-container-lowest rounded-3xl p-md flex flex-col justify-between border border-surface-variant hover:shadow-warm transition-all group relative overflow-hidden">
+<div class="absolute -left-5 -top-5 w-32 h-32 bg-primary-fixed opacity-30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+<div class="z-10">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">edit_document</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Content</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Nội Dung</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Structure compelling arguments and craft memorable stories.</p>
+</div>
+</div>
+<!-- Stage Presence (Span 2 col) -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-3xl p-md flex flex-col justify-between border border-surface-variant hover:shadow-warm transition-all group overflow-hidden relative">
+<div class="absolute right-0 bottom-0 w-64 h-64 bg-primary-container opacity-10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700 translate-x-1/4 translate-y-1/4"></div>
+<div class="z-10 flex flex-col md:flex-row gap-md items-start md:items-center h-full">
+<div class="flex-1">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">theater_comedy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Stage Presence</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Phong Thái Sân Khấu</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Build unshakeable confidence and connect deeply with any audience, overcoming stage fright.</p>
+</div>
+<div class="hidden md:block w-48 h-full rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A brightly lit, modern stage setting focusing on a young student standing confidently at a podium. The environment features warm, sun-drenched lighting with subtle golden hour tones. The aesthetic is clean, professional yet kid-friendly, emphasizing empowerment and high-contrast vibrant optimism. Shallow depth of field blurs the warm background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjmSzBRxbeL8cxTv2TSRBn83qPvd-o5ZxwCd6F0iDnKWJhEupW0m_MGqlEEUVA3dB_dPzDrNhZr-q4a_US0EeCwh_dZINVi6TP5ta73eIiWGEVkkSRVvKf0QO4SWqovu0cEmhDWIdwmKjGY-EX2fdaPTr7vqNZNFWVFULWZoHZax2moHOpded2hXz6Vt1FIM5T-UMf2ZUn4ZIfZi-aSRK0kukexO9BjjXWWvb-ZL9UrS3bYkQh_gN"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center bg-surface-container-highest bg-surface-container-highest">
+<div class="mb-sm md:mb-0">
+<span class="font-headline-md text-headline-md text-on-surface font-headline-md text-headline-md text-on-surface">SpeakUp Kids</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">© 2024 SpeakUp Kids. Empowering Young Voices.</p>
+</div>
+<div class="flex flex-wrap gap-gutter justify-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">Vietnamese (VN)</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">English (US)</a>
+</div>
+</footer>
+</body></html>
