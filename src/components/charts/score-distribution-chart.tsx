@@ -11,7 +11,7 @@ export function ScoreDistributionChart({ data }: { data: { bucket: string; count
           <XAxis dataKey="bucket" tick={{ fontSize: 12 }} />
           <YAxis allowDecimals={false} tick={{ fontSize: 12 }} />
           <Tooltip />
-          <Bar dataKey="count" fill="#1e40af" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="count" fill="var(--color-tertiary)" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

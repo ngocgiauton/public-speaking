@@ -28,9 +28,9 @@ export default async function StudentJourneyPage() {
             <section key={level.id}>
               <div className="mb-3 flex items-center gap-3">
                 <Badge variant="royal">Level {level.orderIndex}</Badge>
-                <h2 className="font-heading text-lg font-bold">{level.name}</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{level.name}</h2>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="relative flex flex-col gap-3 border-l-2 border-tertiary/30 pl-4">
                 {level.lessons.map((item) => (
                   <JourneyNode key={item.lesson.id} item={item} />
                 ))}

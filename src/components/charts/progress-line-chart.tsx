@@ -7,7 +7,7 @@ export function ProgressLineChart({
   data,
   dataKey,
   label,
-  color = "#1e40af",
+  color = "var(--color-tertiary)",
 }: {
   data: Record<string, string | number>[];
   dataKey: string;
