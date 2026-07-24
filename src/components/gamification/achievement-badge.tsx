@@ -33,9 +33,9 @@ const ICONS: Record<string, LucideIcon> = {
 };
 
 const RARITY_STYLES: Record<string, string> = {
-  common: "border-slate-300 text-slate-600",
+  common: "border-outline-variant text-on-surface-variant",
   rare: "border-brand-royal/40 text-brand-royal",
-  epic: "border-purple-400 text-purple-600",
+  epic: "border-secondary/40 text-secondary",
   legendary: "border-brand-gold text-brand-gold",
 };
 

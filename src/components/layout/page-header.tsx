@@ -37,8 +37,8 @@ export function PageHeader({
       )}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="font-heading text-2xl font-bold">{title}</h1>
-          {description && <p className="mt-1 text-muted-foreground">{description}</p>}
+          <h1 className="font-headline-lg text-headline-lg text-on-surface">{title}</h1>
+          {description && <p className="mt-1 font-body-md text-body-md text-on-surface-variant">{description}</p>}
         </div>
         {actions && <div className="flex items-center gap-2">{actions}</div>}
       </div>

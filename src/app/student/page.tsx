@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { BookOpenCheck, Flame, ClipboardList, RotateCcw } from "lucide-react";
-import { PageHeader } from "@/components/layout/page-header";
 import { StatCard } from "@/components/dashboard/stat-card";
 import { ProgressCard } from "@/components/dashboard/progress-card";
 import { SkillScoreCard } from "@/components/dashboard/skill-score-card";
@@ -21,10 +20,14 @@ export default async function StudentDashboardPage() {
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-6">
-      <PageHeader
-        title={`Chào ${user!.profile.full_name}!`}
-        description="Cùng tiếp tục hành trình Speak to Lead của bạn nhé."
-      />
+      <header className="flex flex-col gap-1">
+        <h1 className="font-display-lg text-[2rem] leading-tight sm:text-display-lg text-on-surface">
+          Chào {user!.profile.full_name}! 🌟
+        </h1>
+        <p className="font-body-lg text-body-lg text-on-surface-variant">
+          Cùng tiếp tục hành trình Speak to Lead của bạn nhé.
+        </p>
+      </header>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <StatCard label="Chuỗi ngày học" value={`${dashboard.currentStreak} ngày`} icon={Flame} accent="gold" />
